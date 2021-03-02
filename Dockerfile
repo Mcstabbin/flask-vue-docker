@@ -5,7 +5,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY ./client/package*.json ./
 RUN npm install
 COPY ./client .
-RUN npm run build
+RUN npm run build --fix
 
 # production
 FROM nginx:stable-alpine as production
