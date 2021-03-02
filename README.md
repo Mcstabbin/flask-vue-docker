@@ -4,7 +4,7 @@
 
 1. Clone
 
-2. Run the server-side Flask app in one terminal window:
+2. For Local Development Only
 
     ```sh
     $ cd server
@@ -24,4 +24,20 @@
     $ npm run serve
     ```
 
-    Navigate to [http://localhost:8080](http://localhost:8080)
+3. For Docerization
+    We will need run this in project root
+    ```sh
+    $ docker build -t web:latest .
+    $ docker run -d --name flask-vue -e "PORT=8765" -p 8007:8765 web:latest
+    ```
+
+    Navigate to [http://localhost:8007](http://localhost:8007)
+    Stop then remove the running container once done:
+    
+    ```sh
+    $ docker stop flask-vue
+    $ docker rm flask-vue
+    ```  
+    
+    
+   
