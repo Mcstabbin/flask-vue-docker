@@ -24,7 +24,7 @@
     $ npm run serve
     ```
 
-3. For Docerization
+3. For Dockerization
     We will need run this in project root
     ```sh
     $ docker build -t web:latest .
